@@ -53,5 +53,5 @@ To avoid storing too much information, I am going to store the last ten records 
 ## Other notes
 I have to think more deeply about how I'm storing the date and location, but for now I'm just going to stick to:
 
-Date: MM-DD-YYYY
+Date: MM-DD-YYYY  
 Location: STREET ADDRESS, CITY, STATE ZIPCODE
