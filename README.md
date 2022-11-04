@@ -31,16 +31,22 @@ As an example, suppose we're entering the phone number (123) 456-7890 (no need t
 
 The 'names' file would look like:
 
+```
 John Doe.11-04-2022 10:46
+```
 
 The 'addresses' file would look like:
 
+```
 100 Main Street.11-04-2022 10:46
+```
 
 And the call outcomes file would be empty. If the phone number were later updated with the name Jane Doe on December 5th, 2022 at 6:13pm, then the 'names' file would look like:
 
+```
 Jane Doe.12-05-2022 18:13
 John Doe.11-04-2022 10:46
+```
 
 To avoid storing too much information, I am going to store the last ten records for each name, address, and call outcome at most. If there are already ten records and we go to add another, the oldest one will get deleted.
 
