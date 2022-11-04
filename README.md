@@ -18,9 +18,9 @@ The solution, that this project aims to provide, is to store the history of ever
 and so on. As the territory is being used, it can be updated to reflect the call outcomes (whether it's No en casa, No en servicio, Ocupado, etc.) and any census (on whitepages and other websites) that the group conductor or the territory servant decides to do.
 
 ## Technical details
-I'm storing each phone number in its own folder, where the name of the folder is the phone number itself. Each phone number folder will have three files, titled 'names', 'addresses', and 'call-outcomes', each of which will have a separate record on each line of the file. Each record will consist of two pieces of information, separated by a period (.). The first will be the main data, whether it's the name, address, or call outcome, and the second will be a timestamp representing when that record was entered.
+I'm storing each phone number in its own folder, where the name of the folder is the phone number itself. Each phone number folder will have three files, titled 'names', 'addresses', and 'call-outcomes', each of which will have a separate record on each line of the file. Each record will consist of two pieces of information, separated by a period (.). The first will be the main data, whether it's the name, address, or call outcome, and the second will be a date representing when that record was entered.
 
-As an example, suppose we're entering the phone number (123) 456-7890 (no need to worry about the + before the phone number, since we will only be dealing with American numbers) with the address 100 Main Street and the name of the current owner is John Doe. Let's say we're entering this information for the first time on November 4th, 2022 at 10:46am. Then the folder would look like:
+As an example, suppose we're entering the phone number (123) 456-7890 (no need to worry about the + before the phone number, since we will only be dealing with American numbers) with the address 100 Main Street and the name of the current owner is John Doe. Let's say we're entering this information for the first time on November 4th, 2022. Then the folder would look like:
 
 ```
 1234567890
@@ -32,20 +32,20 @@ As an example, suppose we're entering the phone number (123) 456-7890 (no need t
 The 'names' file would look like:
 
 ```
-John Doe.11-04-2022 10:46
+John Doe.11-04-2022
 ```
 
 The 'addresses' file would look like:
 
 ```
-100 Main Street.11-04-2022 10:46
+100 Main Street.11-04-2022
 ```
 
 And the call outcomes file would be empty. If the phone number were later updated with the name Jane Doe on December 5th, 2022 at 6:13pm, then the 'names' file would look like:
 
 ```
-Jane Doe.12-05-2022 18:13
-John Doe.11-04-2022 10:46
+Jane Doe.12-05-2022
+John Doe.11-04-2022
 ```
 
 To avoid storing too much information, I am going to store the last ten records for each name, address, and call outcome at most. If there are already ten records and we go to add another, the oldest one will get deleted.
@@ -53,5 +53,5 @@ To avoid storing too much information, I am going to store the last ten records 
 ## Other notes
 I have to think more deeply about how I'm storing the time and location, but for now I'm just going to stick to:
 
-Time: MM-DD-YYYY HH:SS (where the HH ranges from 00 to 23)  
+Time: MM-DD-YYYY
 Location: STREET ADDRESS, CITY, STATE ZIPCODE
