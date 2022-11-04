@@ -41,7 +41,7 @@ The 'addresses' file would look like:
 100 Main Street.11-04-2022
 ```
 
-And the call outcomes file would be empty. If the phone number were later updated with the name Jane Doe on December 5th, 2022 at 6:13pm, then the 'names' file would look like:
+And the call outcomes file would be empty. If the phone number were later updated with the name Jane Doe on December 5th, 2022, then the 'names' file would look like:
 
 ```
 Jane Doe.12-05-2022
@@ -51,7 +51,7 @@ John Doe.11-04-2022
 To avoid storing too much information, I am going to store the last ten records for each name, address, and call outcome at most. If there are already ten records and we go to add another, the oldest one will get deleted.
 
 ## Other notes
-I have to think more deeply about how I'm storing the time and location, but for now I'm just going to stick to:
+I have to think more deeply about how I'm storing the date and location, but for now I'm just going to stick to:
 
-Time: MM-DD-YYYY
+Date: MM-DD-YYYY
 Location: STREET ADDRESS, CITY, STATE ZIPCODE
