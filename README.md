@@ -22,10 +22,12 @@ I'm storing each phone number in its own folder, where the name of the folder is
 
 As an example, suppose we're entering the phone number (123) 456-7890 (no need to worry about the + before the phone number, since we will only be dealing with American numbers) with the address 100 Main Street and the name of the current owner is John Doe. Let's say we're entering this information for the first time on November 4th, 2022 at 10:46am. Then the folder would look like:
 
+```
 1234567890
-- names
-- addresses
-- call-outcomes
+| names
+| addresses
+| call-outcomes
+```
 
 The 'names' file would look like:
 
