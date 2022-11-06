@@ -126,7 +126,7 @@ def update_file(phone_number, file_type, record, date):
         records.insert(0, f"{record}.{date}")
 
         del records[10:] #no more than ten names
-        f.seek(0); f.truncate() #clear all contents
+        f.truncate(0) #clear all contents
         f.write("\n".join(records)) #write new contents
 
 
